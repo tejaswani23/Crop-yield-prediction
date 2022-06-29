@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Prediction</title>
+    <link href="{% static 'css/predict.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="log1">
+    <h1>CROP YIELD PREDICTION</h1>
+     
+    <p>PLEASE ENTER DETAILS:</p>
+
+    <form method="post" enctype="multipart/form-data" action="prediction">
+        {% csrf_token %}
+        <div class="form">
+            <p>Year</p>
+            <input name="Year" type="text" value={{request.user.Year}}>
+        </div>
+        <div class="form">
+            <p>Average Rainfall(mm//year)</p>
+            <input name="average_rain_fall_mm_per_year" type="text" value={{request.user.average_rain_fall_mm_per_year}}>
+        </div>
+        <div class="form">
+            <p>Pesticides(in tonnes)</p>
+            <input name="pesticides_tonnes" type="text" value={{request.user.pesticides_tonnes}}>
+        </div>
+        <div class="form">
+            <p>Average temperature</p>
+            <input name="avg_temp" type="text" value={{request.user.avg_temp}}>
+        </div>
+        <div class="form">
+            <p>Area/Place</p>
+            <input name="area" type="text" value={{request.user.area}}>
+        </div>
+        <div class="form">
+            <p>Item/Crop</p>
+            <input name="item" type="text" value={{request.user.item}}>
+        </div>
+        <br>
+        <input class="btn" type="submit" value"submit">
+    </form>
+</div>
+</body>
+</html>

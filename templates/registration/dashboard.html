@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div class="log">
+    <h1>PROFILE</h1>
+     <h2>HELLO,  <mark> {{request.user.username}}</mark></h2>
+    <p class="wl"><mark>Welcome</mark> to your page</p>
+    <br>
+    <div class="abc"><a href="{% url 'predict' %}">Predict Now</a></div>
+    <br>
+    <p>You can change your password <a href="{% url 'password_change' %}">here</a></p>
+    <a href="{% url 'logout' %}">Logout</a>
+</div>
+{% endblock %}
+

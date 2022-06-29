@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title%}{% endblock%}</title>
+        <link href="{% static "css/style.css" %}" rel="stylesheet">>
+    </head>
+    <body>
+        <div id="header">
+            <span class="logo">Crop Price Prediction Portal</span>
+            {% if request.user.is_authenticated%}
+            <ul class="menu">
+                <li {% if section == 'dashboard' %} class="selected" {% endif %}>
+                    <a href="{% url 'dashboard' %}" >Go to Dashboard</a>
+                </li>
+            </ul>
+            {% endif%}
+        </div>
+        <div id="content">
+            {% block content%}
+            {% endblock%}
+        </div>
+        <img src="{% static 'images/9.png' %}" alt="">
+    </body>
+</html>    
+    

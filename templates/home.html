@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title%}Home{% endblock%}</title>
+        <link href="{% static 'css\home.css' %}" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bevan&family=Courgette&display=swap" rel="stylesheet">
+    </head>
+    <body>
+      <div class="first">
+       <div class="content">
+          <p><span>WELCOME,</span> to this portal.</p>
+          <h1> CROP <mark>YIELD</mark> PREDICTION</h1>
+          <div class="flex">
+             <p>To <span>Predict</span> :</p><br><br>
+             <a href="{% url 'login' %}">Login</a>
+             <a href="{% url 'register' %}">Register</a>
+          </div>
+       </div>
+       <div class="main-div">
+            <h2>What We Do For You??</h2>
+            <p>Our prediction provides the farmers/users an approximation on how much amount of crop yield will be produced depending upon the given input.</p>
+            <div class="sec">
+               <img src="{% static 'images/7.png' %}" alt="">
+            </div>
+       </div>
+      </div>
+    </body>
+</html>
