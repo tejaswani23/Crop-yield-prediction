@@ -1,0 +1,43 @@
+.log1{
+    width:600px;
+    height:500px;
+    position: absolute;
+    top:20%;
+    left: 50%;
+    transform:translate(-50%,-30%);
+}
+
+body{
+    background-image: url("../images/8.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+h1{
+    color:rgb(246, 243, 240);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:50px;
+}
+
+p{
+    color:rgb(118, 249, 249);
+    font-size:20px;
+    margin-left:20%;
+}
+
+input{
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom:2px solid white;
+    color:beige;
+    font-size: 20px;
+    margin-left:20%;
+}
+
+.btn{
+    background:rgb(246, 182, 242);
+    color:black;
+    width:300px;
+    text-align: center;
+}
